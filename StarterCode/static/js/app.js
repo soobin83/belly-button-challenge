@@ -20,12 +20,21 @@ init();
 
 function showmetadata(sampleid) {
     d3.json(url).then(function (data) {
-        let metadata = data.metadata
-        let metadataarray = metadata.filter(sample => sample.id == sampleid)
-        let result = metadataarray[0]
-        console.log(result)
+        let metadata = data.metadata;
+        let metadataarray = metadata.filter(sample => sample.id == sampleid);
+        let result = metadataarray[0];
+        console.log(result);
+        let some_var = d3.select("#sample-metadata");
+        some_var.html("");
+        for (category in result){
+            some_var.append("h5").text(`${category}: ${result[category]}`);
+        };
     })
+    
 }
+
+
+
 function optionChanged(newsample) {
     showbarchart(newsample)
     showbubblechart(newsample)
