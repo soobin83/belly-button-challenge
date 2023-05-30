@@ -85,6 +85,7 @@ Plotly.newPlot("bar", dataPlot, layout);
 
 }
 
+//bubble chart
 function showbubblechart(sampleid) {
     d3.json(url).then(function (data) {
         let samples = data.samples
@@ -94,7 +95,7 @@ function showbubblechart(sampleid) {
         let ids = sample.otu_ids
         let labels = sample.otu_labels
  
-// bubble chart
+
 let trace1 = {
     x: ids,
     y: values,
@@ -121,33 +122,3 @@ Plotly.newPlot("bubble", dataPlot1, layout);
 };
 
 
-////////
-//{"id": "943", "otu_ids": [1795], "sample_values": [2], "otu_labels": ["Bacteria;Firmicutes;Bacilli;Bacillales;Staphylococcaceae;Staphylococcus"]},
-
-// function comparegods(row1, row2) {
-//     return row2.greekSearchResults- row1.greeksearchresults;
-// };
-
-// data.sort(comparegods)
-
-// data = data.slice(0,10)
-// data.reverse()
-
-// let trace1 = {
-//     x: results,
-//     y: names,
-//     type: "bar", 
-//     orientation: 'h'
-// };
-
-// // Data trace array
-// let dataPlot = [trace1];
-
-
-// // Apply title to the layout
-// let layout = {
-//     title: "The top 10 OTUs"
-// };
-
-// // Render the plot to the div tag with id "plot"
-// Plotly.newPlot("plot", traceData, layout);
