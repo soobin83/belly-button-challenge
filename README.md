@@ -3,3 +3,4 @@ This is the module 14 challenge, where we were told to "build an interactive das
 
 The two files, app.js and index.html are the main files which have all the codes. Samples.json was provided for reference. 
 
+* for some starting codes, I got help from the tutor. Also I received some help from the learning assistant when creating a sample metadata table.
